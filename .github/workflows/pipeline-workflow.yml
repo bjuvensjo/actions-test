@@ -1,0 +1,11 @@
+name: pipeline workflow
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    uses: bjuvensjo/actions-test/.github/workflows/build-workflow.yml@main
+  deploy:
+    uses: bjuvensjo/actions-test/.github/workflows/deploy-workflow.yml@main
+    needs: build

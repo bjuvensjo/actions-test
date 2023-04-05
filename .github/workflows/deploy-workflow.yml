@@ -1,0 +1,13 @@
+name: deploy workflow
+
+on:
+  workflow_call:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute
+        run: |
+          echo Start
+          echo Done
